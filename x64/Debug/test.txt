@@ -1,0 +1,93 @@
+INSERT_M:T3INF1001;Mathematik;Informatik;8
+INSERT_M:T3INF1002;Theoretische Informatik;Informatik;5
+INSERT_M:T3INF1004;Programmieren;Informatik;9
+INSERT_M:T3INF1006;Technische Informatik;Informatik;5
+INSERT_M:T3INF4104;Elektrotechnik;Informationstechnik;3
+INSERT_L:1;Mathematik I / A;1;K
+INSERT_L:2;Mathematik I / B;1;K
+INSERT_L:3;Mathematik I / C;1;K
+INSERT_L:4;Mathematik II / A;1;K
+INSERT_L:5;Mathematik II / B;1;K
+INSERT_L:6;Mathematik II / C;1;K
+INSERT_L:7;Theoretische Informatik I / A;1;K
+INSERT_L:8;Theoretische Informatik I / B;1;K
+INSERT_L:9;Theoretische Informatik II / A;2;K
+INSERT_L:10;Theoretische Informatik II / B;2;K
+INSERT_L:11;Theoretische Informatik III / A;3;K
+INSERT_L:12;Theoretische Informatik III / B;3;K
+INSERT_L:13;Programmieren I / A;1;PE
+INSERT_L:14;Programmieren I / B;1;PE
+INSERT_L:15;Programmieren I / C;1;PE
+INSERT_L:16;Programmieren II / A;2;PE
+INSERT_L:17;Programmieren II / B;2;PE
+INSERT_L:18;Programmieren II / C;2;PE
+INSERT_L:19;Technische Informatik I / A;2;K
+INSERT_L:20;Technische Informatik I / B;2;K
+INSERT_L:21;Technische Informatik II / A;3;K
+INSERT_L:22;Technische Informatik II / B;3;K
+INSERT_L:23;Technische Informatik III / A;4;K
+INSERT_L:24;Technische Informatik III / B;4;K
+INSERT_L:25;Elektrotechnik / A;1;K
+INSERT_L:26;Elektrotechnik / B;1;K
+INSERT_L:27;Elektrotechnik / C;1;K
+INSERT_L:28;Elektronik / A;1;K
+INSERT_L:29;Elektronik / B;1;K
+INSERT_L:30;Elektronik / C;1;K
+INSERT_L:31;Schaltungstechnik / A;2;K
+INSERT_L:32;Schaltungstechnik / B;2;K
+INSERT_L:33;Schaltungstechnik / C;2;K
+SELECT:1
+JOIN:1;T3INF1001
+JOIN:2;T3INF1001
+JOIN:3;T3INF1001
+JOIN:4;T3INF1001
+JOIN:5;T3INF1001
+JOIN:6;T3INF1001
+JOIN:7;T3INF1002
+JOIN:8;T3INF1002
+JOIN:9;T3INF1002
+JOIN:10;T3INF1002
+JOIN:11;T3INF1002
+JOIN:12;T3INF1002
+JOIN:13;T3INF1004
+JOIN:14;T3INF1004
+JOIN:15;T3INF1004
+JOIN:16;T3INF1004
+JOIN:17;T3INF1004
+JOIN:18;T3INF1004
+JOIN:19;T3INF1006
+JOIN:20;T3INF1006
+JOIN:21;T3INF1006
+JOIN:22;T3INF1006
+JOIN:23;T3INF1006
+JOIN:24;T3INF1006
+JOIN:25;T3INF4104
+JOIN:26;T3INF4104
+JOIN:27;T3INF4104
+JOIN:28;T3INF4104
+JOIN:29;T3INF4104
+JOIN:30;T3INF4104
+JOIN:31;T3INF4104
+JOIN:32;T3INF4104
+JOIN:33;T3INF4104
+DELETE_M:T3INF4104
+DELETE_L:0
+DELETE_L:25
+DELETE_L:26
+DELETE_L:27
+DELETE_L:28
+DELETE_L:29
+DELETE_L:30
+DELETE_L:31
+DELETE_L:32
+DELETE_L:33
+DELETE_M:T3INF4104
+SELECT:1
+UPDATE_M:T3INF1001;Mathe;InformationTechnology;7
+SELECT:1
+JOIN:1;T3INF1002
+SELECT:1
+UPDATE_L:1;Theoretische Informatik Mathe Auffrischung / A;1;None
+SELECT:1
+SELECT:*
+EXIT
