@@ -12,13 +12,12 @@ template<typename T>
 List<T>::~List()
 {
 	if (pAnchor) {
-		Node<T>* current = pAnchor;
-		while (true) {
-			Node<T>* next = current->next;
-			delete current;
-			if (!next) break;
-			current = next;
-		}
+		Node<T>* temp = pAnchor;
+		do {
+			Node<T>* next = temp->next;
+			delete temp;
+			temp = next;
+		} while (temp);
 	}
 }
 
@@ -30,19 +29,18 @@ int List<T>::getLength()
 
 template<typename T>
 inline void List<T>::add(T value)
-{
-	if (!this->pAnchor) {
-		this->pAnchor = new Node<T>;
-		this->pAnchor->value = value;
-		this->pAnchor->next = nullptr;
+{	
+	Node<T>* temp = pAnchor;
+	if (!temp) {
+		temp = pAnchor = new Node<T>;
 	}
 	else {
-		Node<T>* current = pAnchor;
-		while (current->next) current = current->next;
-		current->next = new Node<T>;
-		current->next->value = value;
-		current->next->next = nullptr;
+		while (temp->next) temp = temp->next;
+		temp->next = new Node<T>;
+		temp = temp->next;
 	}
+	temp->value = value;
+	temp->next = nullptr;
 	length++;
 }
 
@@ -51,29 +49,25 @@ void List<T>::remove(std::string value)
 {
 	if (!pAnchor) throw std::exception("Item not found");
 
-	if (*(pAnchor->value) == value) {
-		Node<T>* tmp = pAnchor->next;
-		delete pAnchor;
-		pAnchor = tmp;
-		length--;
-		return;
+	Node<T>* temp = nullptr;
+	if ((*pAnchor->value) == value) {
+		temp = pAnchor;
+		pAnchor = pAnchor->next;
 	}
 
-	bool foundValue = false;
 	Node<T>* prev = pAnchor;
-	while ((prev->next)) {
-		if (*(prev->next->value) == value) {
-			foundValue = true;
+	while (prev->next && !temp) {
+		if ((*prev->next->value) == value) {
+			temp = prev->next;
+			prev->next = prev->next->next;
 			break;
 		}
 		prev = prev->next;
-	};
+	}
 
-	if (!foundValue) throw std::exception("Item not found");
+	if (!temp) throw std::exception("Item not found");
 
-	Node<T>* tmp = prev->next->next;
-	delete prev->next;
-	prev->next = tmp;
+	delete temp;
 	length--;
 }
 
@@ -82,19 +76,11 @@ T List<T>::find(std::string value)
 {
 	if (!pAnchor) throw std::exception("Item not found");
 
-	if (*(pAnchor->value) == value) return pAnchor->value;
-
-	bool foundValue = false;
-	Node<T>* current = pAnchor;
-	while (current->next) {
-		current = current->next;
-		if (*(current->value) == value) {
-			foundValue = true;
-			break;
-		};
-	}
-	
-	if (foundValue) return current->value;
+	Node<T>* temp = pAnchor;
+	do {
+		if ((*temp->value) == value) return temp->value;
+		temp = temp->next;
+	} while (temp);
 
 	throw std::exception("Item not found");
 }
@@ -106,7 +92,7 @@ T List<T>::operator[](int index)
 
 	if (idx < 0 || idx >= length) throw std::exception("Index out of range");
 
-	Node<T>* current = pAnchor;
-	for (int i = 0; i < idx; i++) current = current->next;
-	return current->value;
+	Node<T>* temp = pAnchor;
+	for (int i = 0; i < idx; i++) temp = temp->next;
+	return temp->value;
 }

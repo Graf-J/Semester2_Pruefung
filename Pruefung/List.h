@@ -12,7 +12,6 @@ private:
 	int length;
 
 public:
-
 	List();
 	~List();
 

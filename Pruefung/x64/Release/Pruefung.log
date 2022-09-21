@@ -1,0 +1,14 @@
+﻿  Lehrveranstaltung.cpp
+  List.cpp
+  Modul.cpp
+  Pruefung.cpp
+C:\Users\Johannes\Programming\Studium\Programmieren\Semester_2\Pruefung\Pruefung\Pruefung.cpp(60,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Johannes\Programming\Studium\Programmieren\Semester_2\Pruefung\Pruefung\Pruefung.cpp(70,68): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Johannes\Programming\Studium\Programmieren\Semester_2\Pruefung\Pruefung\Pruefung.cpp(78,65): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Johannes\Programming\Studium\Programmieren\Semester_2\Pruefung\Pruefung\Pruefung.cpp(115,74): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\Johannes\Programming\Studium\Programmieren\Semester_2\Pruefung\Pruefung\Pruefung.cpp(126,68): warning C4267: 'argument': conversion from 'size_t' to 'int', possible loss of data
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 164 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Pruefung.vcxproj -> C:\Users\Johannes\Programming\Studium\Programmieren\Semester_2\Pruefung\x64\Release\Pruefung.exe
